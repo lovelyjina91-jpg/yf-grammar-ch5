@@ -1,0 +1,329 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>UNIT 4 It의 여러 가지 쓰임 | 영핏 영어</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Jua&family=Gowun+Dodum&display=swap" rel="stylesheet"><style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Gowun Dodum',sans-serif;color:#4a4a5a;background:linear-gradient(160deg,#fff0f6 0%,#eef6ff 50%,#f3fff0 100%);min-height:100vh;line-height:1.7;overflow-x:hidden}
+.bg-deco{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.bg-deco span{position:absolute;font-size:46px;opacity:.45;animation:float 9s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-22px) rotate(8deg)}}
+.wrap{position:relative;z-index:1;max-width:820px;margin:0 auto;padding:18px 16px 60px}
+h1,h2,h3,.jua{font-family:'Jua',sans-serif;font-weight:400}
+.brand{display:flex;align-items:center;gap:8px;justify-content:center;margin:6px 0 2px}
+.brand .logo{background:linear-gradient(135deg,#ff8fb1,#ffb38a);color:#fff;font-family:'Jua';padding:5px 14px;border-radius:30px;font-size:18px;box-shadow:0 4px 12px rgba(255,143,177,.4)}
+.brand .en{font-family:'Jua';color:#ff7aa2;font-size:15px;letter-spacing:1px}
+.topcard{background:#fff;border-radius:28px;padding:22px;text-align:center;box-shadow:0 10px 30px rgba(150,170,220,.18);border:3px solid #fff}
+.topcard .icon{font-size:54px;display:block;line-height:1}
+.topcard .no{display:inline-block;background:#ffe1ec;color:#ff5e93;font-family:'Jua';padding:3px 14px;border-radius:20px;font-size:14px;margin:8px 0}
+.topcard h1{font-size:27px;color:#4a4a5a}
+.topcard .sub{color:#9aa;font-size:14px;margin-top:2px}
+.namebar{margin-top:14px;font-size:15px}
+.namebar input{font-family:'Gowun Dodum';border:2px solid #ffd0e0;border-radius:14px;padding:6px 12px;font-size:15px;text-align:center;width:140px;outline:none}
+.namebar input:focus{border-color:#ff9ec0}
+.card{background:#fff;border-radius:24px;padding:20px 22px;margin-top:18px;box-shadow:0 8px 24px rgba(150,170,220,.14)}
+.card h2{font-size:20px;color:#ff7aa2;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.card h2:before{content:'📚';font-size:20px}
+.card.quiz h2:before{content:'✏️'}
+.rule{background:#f3f8ff;border-left:5px solid #8fc0ff;border-radius:12px;padding:10px 14px;margin:10px 0}
+.tip{background:#fff8e6;border-left:5px solid #ffd166;border-radius:12px;padding:10px 14px;margin:12px 0}
+.eg{display:block;color:#7a8;font-size:14px;margin-top:4px}
+table.ex{width:100%;border-collapse:separate;border-spacing:0 6px;margin:8px 0}
+table.ex td{background:#fafbff;padding:8px 12px;font-size:15px}
+table.ex td:first-child{border-radius:12px 0 0 12px;font-weight:bold;color:#5a6;white-space:nowrap}
+table.ex td:last-child{border-radius:0 12px 12px 0;color:#777}
+.x{color:#e06;text-decoration:line-through}
+b{color:#ff6a98}
+.sechead{font-family:'Jua';font-size:18px;color:#6aa0e0;margin:22px 0 4px;padding-left:4px}
+.secintro{font-size:14px;color:#99a;margin-bottom:6px;padding-left:4px}
+.q{background:#fafbff;border:2px solid #eef0fa;border-radius:16px;padding:13px 15px;margin:11px 0;transition:.2s}
+.q.ok{background:#effaf0;border-color:#bfe6c4}
+.q.no{background:#fff0f3;border-color:#ffc9d6}
+.q .qt{font-size:15px;margin-bottom:8px}
+.q.wide .qt{margin-bottom:0}
+.q input.ti{font-family:'Gowun Dodum';border:2px solid #d8e0f0;border-radius:12px;padding:7px 11px;font-size:15px;width:100%;max-width:420px;outline:none}
+.q input.ti:focus{border-color:#9ec0ff}
+.q select{font-family:'Gowun Dodum';border:2px solid #d8e0f0;border-radius:10px;padding:5px 8px;font-size:15px;outline:none;background:#fff;margin:0 3px;color:#46c}
+.q select:focus{border-color:#9ec0ff}
+.bank{font-size:13px;color:#a0a8c0;background:#f0f3fb;border-radius:10px;padding:5px 10px;margin-bottom:8px;display:inline-block}
+.fb{font-size:14px;margin-top:7px;font-family:'Jua';display:none}
+.q.ok .fb.okmsg{display:block;color:#3aa856}
+.q.no .fb.nomsg{display:block;color:#e0588a}
+.pnopt label{display:block;background:#fff;border:2px solid #e6eafc;border-radius:12px;padding:8px 12px;margin:5px 0;cursor:pointer;font-size:14px}
+.pnopt input{margin-right:8px}
+.btns{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:22px}
+.btn{font-family:'Jua';border:none;border-radius:18px;padding:13px 26px;font-size:17px;cursor:pointer;box-shadow:0 5px 14px rgba(0,0,0,.12);transition:.15s}
+.btn:active{transform:translateY(2px)}
+.btn.primary{background:linear-gradient(135deg,#ff8fb1,#ff6a98);color:#fff}
+.btn.ghost{background:#fff;color:#7a8ad0;border:2px solid #d8e0f5}
+.btn.kakao{background:#FEE500;color:#3a1d1d}
+a.btn{text-decoration:none;display:inline-block}
+.foot{text-align:center;margin-top:34px;color:#b6b6c8;font-size:13px}
+.foot .logo2{font-family:'Jua';color:#ff9ec0}
+/* modal */
+.modal{position:fixed;inset:0;background:rgba(80,80,120,.45);display:none;align-items:center;justify-content:center;z-index:50;padding:18px}
+.modal.show{display:flex;animation:pop .3s}
+@keyframes pop{from{opacity:0}to{opacity:1}}
+.sheet{background:#fff;border-radius:28px;max-width:400px;width:100%;padding:28px 24px;text-align:center;box-shadow:0 20px 50px rgba(0,0,0,.25)}
+.sheet .big{font-size:60px;line-height:1}
+.sheet h2{font-family:'Jua';font-size:24px;color:#ff7aa2;margin:8px 0}
+.sheet .score{font-family:'Jua';font-size:40px;color:#5a6}
+.sheet .stars{font-size:26px;margin:6px 0}
+.sheet .msg{font-size:15px;color:#778;margin:6px 0 14px}
+.sheet .preview{background:#f6f8ff;border-radius:14px;padding:12px;font-size:13px;text-align:left;white-space:pre-line;color:#667;margin-bottom:14px;border:1px dashed #cdd6ef}
+/* index */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px;margin-top:18px}
+.ucard{background:#fff;border-radius:22px;padding:18px 14px;text-align:center;text-decoration:none;color:#4a4a5a;box-shadow:0 6px 18px rgba(150,170,220,.16);border:3px solid #fff;transition:.18s;position:relative;display:block}
+.ucard:hover{transform:translateY(-4px);border-color:#ffd9e6}
+.ucard .ic{font-size:40px;display:block}
+.ucard .un{font-family:'Jua';font-size:13px;color:#ff8fb1;margin-top:4px}
+.ucard .ut{font-family:'Jua';font-size:15px;margin-top:2px;color:#556}
+.ucard .badge{position:absolute;top:8px;right:10px;font-size:13px}
+.ucard .done{font-size:12px;color:#3aa856;font-family:'Jua';margin-top:4px;min-height:16px}
+@media(max-width:480px){.topcard h1{font-size:23px}.grid{grid-template-columns:repeat(2,1fr)}}
+</style></head>
+<body><div class="bg-deco">
+<span style="left:5%;top:8%">🌸</span><span style="left:88%;top:12%;animation-delay:1s">⭐</span>
+<span style="left:12%;top:70%;animation-delay:2s">🎈</span><span style="left:80%;top:62%;animation-delay:.5s">🍭</span>
+<span style="left:46%;top:5%;animation-delay:1.5s">☁️</span><span style="left:92%;top:85%;animation-delay:2.5s">🌈</span>
+<span style="left:3%;top:40%;animation-delay:.8s">🦄</span><span style="left:70%;top:30%;animation-delay:1.8s">✨</span></div><div class="wrap">
+<div class="brand"><span class="logo">영핏 영어</span><span class="en">YOUNGFIT ENGLISH</span></div>
+<div class="topcard">
+  <span class="icon">✨</span>
+  <span class="no">UNIT 4</span>
+  <h1 id="utitle">It의 여러 가지 쓰임</h1>
+  <div class="sub">가주어·강조·가목적어·비인칭</div>
+  <div class="namebar">이름: <input id="sname" value="박하민" maxlength="10"></div>
+</div>
+<div class="card"><h2>개념 쏙쏙!</h2>
+      <p>작은 단어 <b>It</b>은 변신을 잘해요! 4가지 변신을 알아봐요. 🪄</p>
+      <div class="rule">① 가주어 It — 진짜 주어(to부정사·동명사·that절)가 길어서 뒤로 보내고 앞에 쓰는 It (뜻 없음)<br>
+        <span class="eg">It is important <b>to exercise</b>. (운동하는 것은 중요하다)</span></div>
+      <div class="rule">② 강조구문 It is ~ that … — 강조하고 싶은 말을 It is 와 that 사이에 쏙!<br>
+        <span class="eg">It was <b>her</b> that I met. (내가 만난 건 바로 그녀였다)</span></div>
+      <div class="rule">③ 가목적어 It — think/find/make 뒤에서 목적어가 길 때 쓰는 It (뜻 없음)<br>
+        <span class="eg">I think <b>it</b> bad to eat much at night.</span></div>
+      <div class="rule">④ 비인칭 주어 It — 시간·날짜·요일·날씨·거리 (뜻 없음) / 대명사 It — '그것'<br>
+        <span class="eg">It is seven o'clock. (시간) / It is on my desk. (그것=대명사)</span></div>
+      <div class="tip">💡 <b>가주어 vs 강조 구분법</b><br>
+        be동사와 that 사이에 <b>형용사</b> → 무조건 가주어!<br>
+        <b>부사(구)</b> → 무조건 강조구문!<br>
+        <b>(대)명사</b> → that 빼고 나머지가 완전한 문장이면 가주어, 빠진 게 있으면 강조!</div></div>
+<div class="card quiz"><h2>연습문제</h2><p class="secintro">먼저 가주어 It 문장을 단어를 배열해서 만들어 보아요! 🧱</p><div class="sechead">🧱 가주어 It — 문장 만들기</div><div class="secintro">괄호 속 단어를 모두 배열해 문장을 완성해요.</div><div class="q" data-kind="text" data-i="0" data-ans='["it is true that tom fell in love with amy"]'>
+      <div class="qt">01. Tom이 Amy와 사랑에 빠진 것은 사실이다.</div><div class="bank">📦 it / Amy / Tom / in / true / is / love / fell / with / that</div>
+      <input class="ti" type="text" placeholder="여기에 답을 써요" autocomplete="off">
+      <div class="fb okmsg">⭕ 정답이에요! 잘했어요!</div>
+      <div class="fb nomsg">정답: <b>It is true that Tom fell in love with Amy.</b></div>
+    </div><div class="q" data-kind="text" data-i="1" data-ans='["it is dangerous to go out alone at night"]'>
+      <div class="qt">02. 밤에 혼자 외출하는 것은 위험하다.</div><div class="bank">📦 it / dangerous / is / out / at / go / alone / night / to</div>
+      <input class="ti" type="text" placeholder="여기에 답을 써요" autocomplete="off">
+      <div class="fb okmsg">⭕ 정답이에요! 잘했어요!</div>
+      <div class="fb nomsg">정답: <b>It is dangerous to go out alone at night.</b></div>
+    </div><div class="q" data-kind="text" data-i="2" data-ans='["it is interesting learning a foreign language"]'>
+      <div class="qt">03. 외국어를 배우는 것은 흥미롭다.</div><div class="bank">📦 it / learning / interesting / language / is / foreign / a</div>
+      <input class="ti" type="text" placeholder="여기에 답을 써요" autocomplete="off">
+      <div class="fb okmsg">⭕ 정답이에요! 잘했어요!</div>
+      <div class="fb nomsg">정답: <b>It is interesting learning a foreign language.</b></div>
+    </div><div class="q" data-kind="text" data-i="3" data-ans='["it is impolite to smoke in public places"]'>
+      <div class="qt">04. 공공장소에서 흡연하는 것은 무례하다.</div><div class="bank">📦 it / to / public / smoke / impolite / is / places / in</div>
+      <input class="ti" type="text" placeholder="여기에 답을 써요" autocomplete="off">
+      <div class="fb okmsg">⭕ 정답이에요! 잘했어요!</div>
+      <div class="fb nomsg">정답: <b>It is impolite to smoke in public places.</b></div>
+    </div><div class="q" data-kind="text" data-i="4" data-ans='["it is important that you keep your word"]'>
+      <div class="qt">05. 네가 약속을 지키는 것은 중요하다.</div><div class="bank">📦 it / you / your / important / word / that / keep / is</div>
+      <input class="ti" type="text" placeholder="여기에 답을 써요" autocomplete="off">
+      <div class="fb okmsg">⭕ 정답이에요! 잘했어요!</div>
+      <div class="fb nomsg">정답: <b>It is important that you keep your word.</b></div>
+    </div><div class="sechead">🔍 가주어/진주어 vs 강조구문 — 구분하기</div><div class="secintro">각 문장이 ①가주어/진주어 인지 ②강조구문 인지 골라요.</div><div class="q" data-kind="sel" data-i="5" data-ans='["①가주어/진주어"]'>
+    <div class="qt">01. It was a false rumor that the couple broke up.  →  <select data-bi="0"><option value="">고르기</option><option value="①가주어/진주어">①가주어/진주어</option><option value="②강조구문">②강조구문</option></select></div>
+    <div class="fb okmsg">⭕ 정답이에요! 잘했어요!</div>
+    <div class="fb nomsg">정답: <b>①가주어/진주어</b></div>
+  </div><div class="q" data-kind="sel" data-i="6" data-ans='["②강조구문"]'>
+    <div class="qt">02. It was what he said that made her fall for him.  →  <select data-bi="0"><option value="">고르기</option><option value="①가주어/진주어">①가주어/진주어</option><option value="②강조구문">②강조구문</option></select></div>
+    <div class="fb okmsg">⭕ 정답이에요! 잘했어요!</div>
+    <div class="fb nomsg">정답: <b>②강조구문</b></div>
+  </div><div class="q" data-kind="sel" data-i="7" data-ans='["①가주어/진주어"]'>
+    <div class="qt">03. It was certain that the man told a lie.  →  <select data-bi="0"><option value="">고르기</option><option value="①가주어/진주어">①가주어/진주어</option><option value="②강조구문">②강조구문</option></select></div>
+    <div class="fb okmsg">⭕ 정답이에요! 잘했어요!</div>
+    <div class="fb nomsg">정답: <b>①가주어/진주어</b></div>
+  </div><div class="q" data-kind="sel" data-i="8" data-ans='["①가주어/진주어"]'>
+    <div class="qt">04. It was lucky that I caught the first bus for Busan.  →  <select data-bi="0"><option value="">고르기</option><option value="①가주어/진주어">①가주어/진주어</option><option value="②강조구문">②강조구문</option></select></div>
+    <div class="fb okmsg">⭕ 정답이에요! 잘했어요!</div>
+    <div class="fb nomsg">정답: <b>①가주어/진주어</b></div>
+  </div><div class="q" data-kind="sel" data-i="9" data-ans='["②강조구문"]'>
+    <div class="qt">05. It is my uncle that teaches me English in his house.  →  <select data-bi="0"><option value="">고르기</option><option value="①가주어/진주어">①가주어/진주어</option><option value="②강조구문">②강조구문</option></select></div>
+    <div class="fb okmsg">⭕ 정답이에요! 잘했어요!</div>
+    <div class="fb nomsg">정답: <b>②강조구문</b></div>
+  </div><div class="q" data-kind="sel" data-i="10" data-ans='["②강조구문"]'>
+    <div class="qt">06. It was yesterday that she attended the school reunion.  →  <select data-bi="0"><option value="">고르기</option><option value="①가주어/진주어">①가주어/진주어</option><option value="②강조구문">②강조구문</option></select></div>
+    <div class="fb okmsg">⭕ 정답이에요! 잘했어요!</div>
+    <div class="fb nomsg">정답: <b>②강조구문</b></div>
+  </div><div class="q" data-kind="sel" data-i="11" data-ans='["①가주어/진주어"]'>
+    <div class="qt">07. It is true that one choice can change your whole life.  →  <select data-bi="0"><option value="">고르기</option><option value="①가주어/진주어">①가주어/진주어</option><option value="②강조구문">②강조구문</option></select></div>
+    <div class="fb okmsg">⭕ 정답이에요! 잘했어요!</div>
+    <div class="fb nomsg">정답: <b>①가주어/진주어</b></div>
+  </div><div class="q" data-kind="sel" data-i="12" data-ans='["②강조구문"]'>
+    <div class="qt">08. It was a false rumor that made the couple feel very bad.  →  <select data-bi="0"><option value="">고르기</option><option value="①가주어/진주어">①가주어/진주어</option><option value="②강조구문">②강조구문</option></select></div>
+    <div class="fb okmsg">⭕ 정답이에요! 잘했어요!</div>
+    <div class="fb nomsg">정답: <b>②강조구문</b></div>
+  </div><div class="q" data-kind="sel" data-i="13" data-ans='["②강조구문"]'>
+    <div class="qt">09. It was him that I met in London the day before yesterday.  →  <select data-bi="0"><option value="">고르기</option><option value="①가주어/진주어">①가주어/진주어</option><option value="②강조구문">②강조구문</option></select></div>
+    <div class="fb okmsg">⭕ 정답이에요! 잘했어요!</div>
+    <div class="fb nomsg">정답: <b>②강조구문</b></div>
+  </div><div class="q" data-kind="sel" data-i="14" data-ans='["②강조구문"]'>
+    <div class="qt">10. It is her kindness that makes her so beautiful and popular.  →  <select data-bi="0"><option value="">고르기</option><option value="①가주어/진주어">①가주어/진주어</option><option value="②강조구문">②강조구문</option></select></div>
+    <div class="fb okmsg">⭕ 정답이에요! 잘했어요!</div>
+    <div class="fb nomsg">정답: <b>②강조구문</b></div>
+  </div><div class="q" data-kind="sel" data-i="15" data-ans='["②강조구문"]'>
+    <div class="qt">11. It was my dog that barked loudly from Saturday to Sunday.  →  <select data-bi="0"><option value="">고르기</option><option value="①가주어/진주어">①가주어/진주어</option><option value="②강조구문">②강조구문</option></select></div>
+    <div class="fb okmsg">⭕ 정답이에요! 잘했어요!</div>
+    <div class="fb nomsg">정답: <b>②강조구문</b></div>
+  </div><div class="q" data-kind="sel" data-i="16" data-ans='["②강조구문"]'>
+    <div class="qt">12. It is in the park that Ben practices jumping rope every night.  →  <select data-bi="0"><option value="">고르기</option><option value="①가주어/진주어">①가주어/진주어</option><option value="②강조구문">②강조구문</option></select></div>
+    <div class="fb okmsg">⭕ 정답이에요! 잘했어요!</div>
+    <div class="fb nomsg">정답: <b>②강조구문</b></div>
+  </div><div class="q" data-kind="sel" data-i="17" data-ans='["①가주어/진주어"]'>
+    <div class="qt">13. It was my opinion that government should not raise taxes again.  →  <select data-bi="0"><option value="">고르기</option><option value="①가주어/진주어">①가주어/진주어</option><option value="②강조구문">②강조구문</option></select></div>
+    <div class="fb okmsg">⭕ 정답이에요! 잘했어요!</div>
+    <div class="fb nomsg">정답: <b>①가주어/진주어</b></div>
+  </div><div class="q" data-kind="sel" data-i="18" data-ans='["①가주어/진주어"]'>
+    <div class="qt">14. It is true that Sophia ran fast before her ankle was hurt.  →  <select data-bi="0"><option value="">고르기</option><option value="①가주어/진주어">①가주어/진주어</option><option value="②강조구문">②강조구문</option></select></div>
+    <div class="fb okmsg">⭕ 정답이에요! 잘했어요!</div>
+    <div class="fb nomsg">정답: <b>①가주어/진주어</b></div>
+  </div><div class="q" data-kind="sel" data-i="19" data-ans='["①가주어/진주어"]'>
+    <div class="qt">15. It is a good habit that your father takes a walk everyday.  →  <select data-bi="0"><option value="">고르기</option><option value="①가주어/진주어">①가주어/진주어</option><option value="②강조구문">②강조구문</option></select></div>
+    <div class="fb okmsg">⭕ 정답이에요! 잘했어요!</div>
+    <div class="fb nomsg">정답: <b>①가주어/진주어</b></div>
+  </div><div class="q" data-kind="sel" data-i="20" data-ans='["②강조구문"]'>
+    <div class="qt">16. It was in the heavy rain that the young children played outside.  →  <select data-bi="0"><option value="">고르기</option><option value="①가주어/진주어">①가주어/진주어</option><option value="②강조구문">②강조구문</option></select></div>
+    <div class="fb okmsg">⭕ 정답이에요! 잘했어요!</div>
+    <div class="fb nomsg">정답: <b>②강조구문</b></div>
+  </div><div class="q" data-kind="sel" data-i="21" data-ans='["①가주어/진주어"]'>
+    <div class="qt">17. It is a pity that you lost a chance to work as a designer.  →  <select data-bi="0"><option value="">고르기</option><option value="①가주어/진주어">①가주어/진주어</option><option value="②강조구문">②강조구문</option></select></div>
+    <div class="fb okmsg">⭕ 정답이에요! 잘했어요!</div>
+    <div class="fb nomsg">정답: <b>①가주어/진주어</b></div>
+  </div><div class="q" data-kind="sel" data-i="22" data-ans='["②강조구문"]'>
+    <div class="qt">18. It was the movie, 'White Night' that the couple watched first.  →  <select data-bi="0"><option value="">고르기</option><option value="①가주어/진주어">①가주어/진주어</option><option value="②강조구문">②강조구문</option></select></div>
+    <div class="fb okmsg">⭕ 정답이에요! 잘했어요!</div>
+    <div class="fb nomsg">정답: <b>②강조구문</b></div>
+  </div><div class="q" data-kind="sel" data-i="23" data-ans='["②강조구문"]'>
+    <div class="qt">19. It will not be until he comes back home that he will feel at home.  →  <select data-bi="0"><option value="">고르기</option><option value="①가주어/진주어">①가주어/진주어</option><option value="②강조구문">②강조구문</option></select></div>
+    <div class="fb okmsg">⭕ 정답이에요! 잘했어요!</div>
+    <div class="fb nomsg">정답: <b>②강조구문</b></div>
+  </div><div class="q" data-kind="sel" data-i="24" data-ans='["①가주어/진주어"]'>
+    <div class="qt">20. It is absolutely certain that what you say will influence you.  →  <select data-bi="0"><option value="">고르기</option><option value="①가주어/진주어">①가주어/진주어</option><option value="②강조구문">②강조구문</option></select></div>
+    <div class="fb okmsg">⭕ 정답이에요! 잘했어요!</div>
+    <div class="fb nomsg">정답: <b>①가주어/진주어</b></div>
+  </div><div class="sechead">🧱 가목적어 It — 문장 만들기</div><div class="secintro">괄호 속 단어를 모두 배열해 문장을 완성해요.</div><div class="q" data-kind="text" data-i="25" data-ans='["i think it obligation helping the poor"]'>
+      <div class="qt">01. 나는 가난한 사람들을 돕는 것이 의무라고 생각한다.</div><div class="bank">📦 it / I / helping / obligation / the poor / think</div>
+      <input class="ti" type="text" placeholder="여기에 답을 써요" autocomplete="off">
+      <div class="fb okmsg">⭕ 정답이에요! 잘했어요!</div>
+      <div class="fb nomsg">정답: <b>I think it obligation helping the poor.</b></div>
+    </div><div class="q" data-kind="text" data-i="26" data-ans='["she found it difficult to look after babies"]'>
+      <div class="qt">02. 그녀는 아기들을 돌보는 것이 어렵다는 것을 알았다.</div><div class="bank">📦 it / she / look after / to / difficult / babies / found</div>
+      <input class="ti" type="text" placeholder="여기에 답을 써요" autocomplete="off">
+      <div class="fb okmsg">⭕ 정답이에요! 잘했어요!</div>
+      <div class="fb nomsg">정답: <b>She found it difficult to look after babies.</b></div>
+    </div><div class="q" data-kind="text" data-i="27" data-ans='["we thought it nice that he donated blood"]'>
+      <div class="qt">03. 우리는 그가 헌혈한 것이 좋다고 생각했다.</div><div class="bank">📦 it / we / donated / nice / blood / that / he / thought</div>
+      <input class="ti" type="text" placeholder="여기에 답을 써요" autocomplete="off">
+      <div class="fb okmsg">⭕ 정답이에요! 잘했어요!</div>
+      <div class="fb nomsg">정답: <b>We thought it nice that he donated blood.</b></div>
+    </div><div class="q" data-kind="text" data-i="28" data-ans='["ben found it important saving water"]'>
+      <div class="qt">04. Ben은 물을 아끼는 것이 중요하다는 것을 알았다.</div><div class="bank">📦 it / Ben / found / water / important / saving</div>
+      <input class="ti" type="text" placeholder="여기에 답을 써요" autocomplete="off">
+      <div class="fb okmsg">⭕ 정답이에요! 잘했어요!</div>
+      <div class="fb nomsg">정답: <b>Ben found it important saving water.</b></div>
+    </div><div class="q" data-kind="text" data-i="29" data-ans='["tim made it a rule to get up at seven"]'>
+      <div class="qt">05. Tim은 7시에 일어나는 것을 규칙으로 만들었다.</div><div class="bank">📦 it / Tim / a rule / to / made / get up / at / seven</div>
+      <input class="ti" type="text" placeholder="여기에 답을 써요" autocomplete="off">
+      <div class="fb okmsg">⭕ 정답이에요! 잘했어요!</div>
+      <div class="fb nomsg">정답: <b>Tim made it a rule to get up at seven.</b></div>
+    </div><div class="sechead">🌤️ 비인칭 주어 It vs 대명사 It — 구분하기</div><div class="secintro">밑줄 친 It이 ①비인칭 주어 인지 ②대명사 인지 골라요.</div><div class="q" data-kind="sel" data-i="30" data-ans='["②대명사"]'>
+    <div class="qt">01. It might be Jonathan's puppy.  →  <select data-bi="0"><option value="">고르기</option><option value="①비인칭 주어">①비인칭 주어</option><option value="②대명사">②대명사</option></select></div>
+    <div class="fb okmsg">⭕ 정답이에요! 잘했어요!</div>
+    <div class="fb nomsg">정답: <b>②대명사</b></div>
+  </div><div class="q" data-kind="sel" data-i="31" data-ans='["①비인칭 주어"]'>
+    <div class="qt">02. It is only four kilometers from here.  →  <select data-bi="0"><option value="">고르기</option><option value="①비인칭 주어">①비인칭 주어</option><option value="②대명사">②대명사</option></select></div>
+    <div class="fb okmsg">⭕ 정답이에요! 잘했어요!</div>
+    <div class="fb nomsg">정답: <b>①비인칭 주어</b></div>
+  </div><div class="q" data-kind="sel" data-i="32" data-ans='["①비인칭 주어"]'>
+    <div class="qt">03. It is warm today, but it is raining hard.  →  <select data-bi="0"><option value="">고르기</option><option value="①비인칭 주어">①비인칭 주어</option><option value="②대명사">②대명사</option></select></div>
+    <div class="fb okmsg">⭕ 정답이에요! 잘했어요!</div>
+    <div class="fb nomsg">정답: <b>①비인칭 주어</b></div>
+  </div><div class="q" data-kind="sel" data-i="33" data-ans='["①비인칭 주어"]'>
+    <div class="qt">04. How long does it take to get there by bus?  →  <select data-bi="0"><option value="">고르기</option><option value="①비인칭 주어">①비인칭 주어</option><option value="②대명사">②대명사</option></select></div>
+    <div class="fb okmsg">⭕ 정답이에요! 잘했어요!</div>
+    <div class="fb nomsg">정답: <b>①비인칭 주어</b></div>
+  </div><div class="q" data-kind="sel" data-i="34" data-ans='["②대명사"]'>
+    <div class="qt">05. It is one of the most expensive sports cars in the world.  →  <select data-bi="0"><option value="">고르기</option><option value="①비인칭 주어">①비인칭 주어</option><option value="②대명사">②대명사</option></select></div>
+    <div class="fb okmsg">⭕ 정답이에요! 잘했어요!</div>
+    <div class="fb nomsg">정답: <b>②대명사</b></div>
+  </div><div class="q" data-kind="sel" data-i="35" data-ans='["②대명사"]'>
+    <div class="qt">06. I went to a farm yesterday and it was full of friendly animals.  →  <select data-bi="0"><option value="">고르기</option><option value="①비인칭 주어">①비인칭 주어</option><option value="②대명사">②대명사</option></select></div>
+    <div class="fb okmsg">⭕ 정답이에요! 잘했어요!</div>
+    <div class="fb nomsg">정답: <b>②대명사</b></div>
+  </div></div>
+<div class="btns">
+  <button class="btn primary" onclick="showResult()">🎯 다 풀었어요! 채점하기</button>
+  <a class="btn ghost" href="index.html">🏠 다른 유닛 보기</a>
+</div>
+<div class="foot">🌟 <span class="logo2">영핏 영어 · YOUNGFIT ENGLISH</span> 🌟<br>차근차근 풀다 보면 문법왕이 될 거예요!</div>
+</div><div class="modal" id="modal"><div class="sheet">
+    <div class="big" id="rbig">🎉</div>
+    <h2>채점 결과</h2>
+    <div class="score" id="rscore">0 / 0</div>
+    <div class="stars" id="rstars">⭐</div>
+    <div class="msg" id="rmsg"></div>
+    <div class="preview" id="rprev"></div>
+    <button class="btn kakao" id="copybtn" onclick="copyResult()" style="width:100%">📋 결과 복사 (카톡에 붙여넣기)</button>
+    <div class="btns" style="margin-top:12px">
+      <button class="btn ghost" onclick="retry()">🔄 다시 풀기</button>
+      <a class="btn ghost" href="index.html">🏠 처음으로</a>
+    </div>
+  </div></div><script>
+const TOTAL=36;
+function norm(s){return (s||'').toLowerCase().replace(/[.,!?;:]/g,' ').replace(/\s+/g,' ').trim();}
+function gradeOne(q){
+  const kind=q.dataset.kind; const ans=JSON.parse(q.dataset.ans);
+  if(kind==='text'){
+    const v=norm(q.querySelector('input').value);
+    return ans.some(a=>norm(a)===v);
+  } else {
+    const sels=[...q.querySelectorAll('select')];
+    return sels.every((s,i)=>norm(s.value)===norm(ans[i]) && s.value!=='');
+  }
+}
+function showResult(){
+  const qs=[...document.querySelectorAll('.q')];
+  let score=0;
+  qs.forEach(q=>{const ok=gradeOne(q);q.classList.remove('ok','no');q.classList.add(ok?'ok':'no');if(ok)score++;});
+  const pct=Math.round(score/TOTAL*100);
+  const name=(document.getElementById('sname')?.value||'박하민').trim()||'박하민';
+  const stars='⭐'.repeat(Math.max(1,Math.round(score/TOTAL*5)));
+  let big='🎉',msg='참 잘했어요! 최고예요!';
+  if(pct<60){big='💪';msg='조금만 더 힘내요! 다시 도전!';}
+  else if(pct<85){big='😊';msg='잘하고 있어요! 거의 다 왔어요!';}
+  const today=new Date().toISOString().slice(0,10);
+  const text='[영핏 영어] '+name+' 학습 결과 🎉\n'+document.getElementById('utitle').textContent+'\n점수: '+score+'/'+TOTAL+' ('+pct+'점)\n'+stars+' '+msg+'\n'+today;
+  document.getElementById('rbig').textContent=big;
+  document.getElementById('rscore').textContent=score+' / '+TOTAL;
+  document.getElementById('rstars').textContent=stars;
+  document.getElementById('rmsg').textContent=msg;
+  document.getElementById('rprev').textContent=text;
+  window._kakaoText=text;
+  try{const k='yf_'+location.pathname.split('/').pop();localStorage.setItem(k,JSON.stringify({score,total:TOTAL,pct}));}catch(e){}
+  document.getElementById('modal').classList.add('show');
+  document.querySelector('.q.no')?.scrollIntoView({behavior:'smooth',block:'center'});
+}
+function copyResult(){
+  const txt=window._kakaoText||'';
+  navigator.clipboard.writeText(txt).then(()=>{
+    const b=document.getElementById('copybtn');b.textContent='복사됐어요! 카톡에 붙여넣기 📋✅';
+    setTimeout(()=>b.textContent='📋 결과 복사 (카톡에 붙여넣기)',2200);
+  }).catch(()=>{
+    const ta=document.createElement('textarea');ta.value=txt;document.body.appendChild(ta);ta.select();document.execCommand('copy');ta.remove();
+    document.getElementById('copybtn').textContent='복사됐어요! ✅';
+  });
+}
+function closeModal(){document.getElementById('modal').classList.remove('show');}
+function retry(){document.querySelectorAll('.q').forEach(q=>{q.classList.remove('ok','no');q.querySelectorAll('select').forEach(s=>s.value='');q.querySelectorAll('input').forEach(i=>i.value='');});closeModal();window.scrollTo({top:0,behavior:'smooth'});}
+</script></body></html>
