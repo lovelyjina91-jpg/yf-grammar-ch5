@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>UNIT 7 each, every | 영핏 영어</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Jua&family=Gowun+Dodum&display=swap" rel="stylesheet"><style>
+<title>UNIT 7 each, every | 영핏 영어 EngFit</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Jua&family=Gowun+Dodum&display=swap" rel="stylesheet"><style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Gowun Dodum',sans-serif;color:#4a4a5a;background:linear-gradient(160deg,#fff0f6 0%,#eef6ff 50%,#f3fff0 100%);min-height:100vh;line-height:1.7;overflow-x:hidden}
 .bg-deco{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
@@ -62,13 +62,23 @@ a.btn{text-decoration:none;display:inline-block}
 .modal{position:fixed;inset:0;background:rgba(80,80,120,.45);display:none;align-items:center;justify-content:center;z-index:50;padding:18px}
 .modal.show{display:flex;animation:pop .3s}
 @keyframes pop{from{opacity:0}to{opacity:1}}
-.sheet{background:#fff;border-radius:28px;max-width:400px;width:100%;padding:28px 24px;text-align:center;box-shadow:0 20px 50px rgba(0,0,0,.25)}
+.sheet{background:#fff;border-radius:28px;max-width:420px;width:100%;max-height:92vh;overflow-y:auto;padding:26px 22px;text-align:center;box-shadow:0 20px 50px rgba(0,0,0,.25)}
 .sheet .big{font-size:60px;line-height:1}
 .sheet h2{font-family:'Jua';font-size:24px;color:#ff7aa2;margin:8px 0}
 .sheet .score{font-family:'Jua';font-size:40px;color:#5a6}
 .sheet .stars{font-size:26px;margin:6px 0}
 .sheet .msg{font-size:15px;color:#778;margin:6px 0 14px}
 .sheet .preview{background:#f6f8ff;border-radius:14px;padding:12px;font-size:13px;text-align:left;white-space:pre-line;color:#667;margin-bottom:14px;border:1px dashed #cdd6ef}
+.wrongbox{display:none;text-align:left;background:#fff6f9;border:2px solid #ffd9e6;border-radius:14px;padding:10px 14px;margin:6px 0 12px}
+.wrongbox .wh{font-family:'Jua';color:#e0588a;font-size:15px;margin-bottom:4px}
+.wrongbox .wh.allok{color:#3aa856}
+.wrongbox ul{margin:0;padding-left:18px}
+.wrongbox li{font-size:14px;color:#778;margin:3px 0}
+.explain{text-align:left;background:#f3f8ff;border:2px solid #d8e8ff;border-radius:16px;padding:12px 16px;margin:6px 0 14px}
+.explain .exhead{font-family:'Jua';color:#5a8fd6;font-size:16px;margin-bottom:6px}
+.explain .extext{font-size:14px;color:#566}
+.explain ul{margin:6px 0 0;padding-left:18px}
+.explain li{margin:5px 0;line-height:1.6}
 /* index */
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px;margin-top:18px}
 .ucard{background:#fff;border-radius:22px;padding:18px 14px;text-align:center;text-decoration:none;color:#4a4a5a;box-shadow:0 6px 18px rgba(150,170,220,.16);border:3px solid #fff;transition:.18s;position:relative;display:block}
@@ -85,7 +95,7 @@ a.btn{text-decoration:none;display:inline-block}
 <span style="left:12%;top:70%;animation-delay:2s">🎈</span><span style="left:80%;top:62%;animation-delay:.5s">🍭</span>
 <span style="left:46%;top:5%;animation-delay:1.5s">☁️</span><span style="left:92%;top:85%;animation-delay:2.5s">🌈</span>
 <span style="left:3%;top:40%;animation-delay:.8s">🦄</span><span style="left:70%;top:30%;animation-delay:1.8s">✨</span></div><div class="wrap">
-<div class="brand"><span class="logo">영핏 영어</span><span class="en">YOUNGFIT ENGLISH</span></div>
+<div class="brand"><span class="logo">영핏 영어</span><span class="en">EngFit</span></div>
 <div class="topcard">
   <span class="icon">🌟</span>
   <span class="no">UNIT 7</span>
@@ -138,13 +148,23 @@ a.btn{text-decoration:none;display:inline-block}
   <button class="btn primary" onclick="showResult()">🎯 다 풀었어요! 채점하기</button>
   <a class="btn ghost" href="index.html">🏠 다른 유닛 보기</a>
 </div>
-<div class="foot">🌟 <span class="logo2">영핏 영어 · YOUNGFIT ENGLISH</span> 🌟<br>차근차근 풀다 보면 문법왕이 될 거예요!</div>
+<div class="foot">🌟 <span class="logo2">영핏 영어 · EngFit</span> 🌟<br>차근차근 풀다 보면 문법왕이 될 거예요!</div>
 </div><div class="modal" id="modal"><div class="sheet">
     <div class="big" id="rbig">🎉</div>
     <h2>채점 결과</h2>
     <div class="score" id="rscore">0 / 0</div>
     <div class="stars" id="rstars">⭐</div>
     <div class="msg" id="rmsg"></div>
+    <div class="wrongbox" id="rwrong"></div>
+    <div class="explain">
+      <div class="exhead">📖 오늘 배운 내용 한눈에 정리</div>
+      <div class="extext"><b>🌟 each / every 는 단수!</b>
+    <ul>
+      <li>each(각각), every(모든)는 <b>단수 취급</b> → 뒤에 <b>단수동사</b>가 와요. (Each <b>has</b>…, Every person <b>likes</b>…)</li>
+      <li>every 뒤에는 항상 <b>단수명사</b>! (every baby ○ / every babies ✗)</li>
+      <li>💡 함정! <b>each of</b> 뒤에는 <b>복수명사</b>가 오지만, 동사는 여전히 <b>단수</b>예요. (Each of students <b>is</b>…)</li>
+    </ul></div>
+    </div>
     <div class="preview" id="rprev"></div>
     <button class="btn kakao" id="copybtn" onclick="copyResult()" style="width:100%">📋 결과 복사 (카톡에 붙여넣기)</button>
     <div class="btns" style="margin-top:12px">
@@ -166,8 +186,16 @@ function gradeOne(q){
 }
 function showResult(){
   const qs=[...document.querySelectorAll('.q')];
-  let score=0;
-  qs.forEach(q=>{const ok=gradeOne(q);q.classList.remove('ok','no');q.classList.add(ok?'ok':'no');if(ok)score++;});
+  let score=0; const wrong=[];
+  qs.forEach(q=>{const ok=gradeOne(q);q.classList.remove('ok','no');q.classList.add(ok?'ok':'no');if(ok){score++;}else{
+    const qt=(q.querySelector('.qt')?.textContent||'').trim();
+    const numM=qt.match(/^\s*([0-9]{1,2}[.\)])/); const num=numM?numM[1]:'•';
+    const corr=q.querySelector('.fb.nomsg')?.innerHTML.replace('정답:','').trim()||'';
+    wrong.push('<li><b>'+num+'</b> 정답: '+corr+'</li>');
+  }});
+  const wbox=document.getElementById('rwrong');
+  if(wrong.length){wbox.innerHTML='<div class="wh">✍️ 다시 볼 문제 ('+wrong.length+'개)</div><ul>'+wrong.join('')+'</ul>';wbox.style.display='block';}
+  else{wbox.innerHTML='<div class="wh allok">🌈 모두 정답! 완벽해요!</div>';wbox.style.display='block';}
   const pct=Math.round(score/TOTAL*100);
   const name=(document.getElementById('sname')?.value||'박하민').trim()||'박하민';
   const stars='⭐'.repeat(Math.max(1,Math.round(score/TOTAL*5)));
@@ -175,7 +203,11 @@ function showResult(){
   if(pct<60){big='💪';msg='조금만 더 힘내요! 다시 도전!';}
   else if(pct<85){big='😊';msg='잘하고 있어요! 거의 다 왔어요!';}
   const today=new Date().toISOString().slice(0,10);
-  const text='[영핏 영어] '+name+' 학습 결과 🎉\n'+document.getElementById('utitle').textContent+'\n점수: '+score+'/'+TOTAL+' ('+pct+'점)\n'+stars+' '+msg+'\n'+today;
+  const text='[영핏 영어 EngFit] '+name+' 학습 결과 🎉
+'+document.getElementById('utitle').textContent+'
+점수: '+score+'/'+TOTAL+' ('+pct+'점)
+'+stars+' '+msg+'
+'+today;
   document.getElementById('rbig').textContent=big;
   document.getElementById('rscore').textContent=score+' / '+TOTAL;
   document.getElementById('rstars').textContent=stars;
@@ -184,7 +216,7 @@ function showResult(){
   window._kakaoText=text;
   try{const k='yf_'+location.pathname.split('/').pop();localStorage.setItem(k,JSON.stringify({score,total:TOTAL,pct}));}catch(e){}
   document.getElementById('modal').classList.add('show');
-  document.querySelector('.q.no')?.scrollIntoView({behavior:'smooth',block:'center'});
+  document.querySelector('.sheet').scrollTop=0;
 }
 function copyResult(){
   const txt=window._kakaoText||'';
@@ -197,5 +229,5 @@ function copyResult(){
   });
 }
 function closeModal(){document.getElementById('modal').classList.remove('show');}
-function retry(){document.querySelectorAll('.q').forEach(q=>{q.classList.remove('ok','no');q.querySelectorAll('select').forEach(s=>s.value='');q.querySelectorAll('input').forEach(i=>i.value='');});closeModal();window.scrollTo({top:0,behavior:'smooth'});}
+function retry(){document.querySelectorAll('.q').forEach(q=>{q.classList.remove('ok','no');q.querySelectorAll('select').forEach(s=>s.value='');q.querySelectorAll('input').forEach(i=>i.value='');});const w=document.getElementById('rwrong');if(w)w.style.display='none';closeModal();window.scrollTo({top:0,behavior:'smooth'});}
 </script></body></html>
